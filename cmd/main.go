@@ -1,7 +1,8 @@
 package main
 
 import (
-	"dsa/dsa1/leetcode"
+	"engineer_pro/leetcode"
+	"log"
 )
 
 func main() {
@@ -11,4 +12,5 @@ func main() {
 	a.Next.Next.Next = &leetcode.ListNode{Val: 4}
 	a.Next.Next.Next.Next = &leetcode.ListNode{Val: 5}
 	leetcode.ReverseList(&a)
+	log.Println(a)
 }
