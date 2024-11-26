@@ -6,11 +6,9 @@ import (
 )
 
 func main() {
-	a := leetcode.ListNode{Val: 1}
-	a.Next = &leetcode.ListNode{Val: 2}
-	a.Next.Next = &leetcode.ListNode{Val: 3}
-	a.Next.Next.Next = &leetcode.ListNode{Val: 4}
-	a.Next.Next.Next.Next = &leetcode.ListNode{Val: 5}
-	leetcode.ReverseList(&a)
-	log.Println(a)
+	edges := [][]int{{0, 1}, {0, 2}, {3, 5}, {5, 4}, {4, 3}}
+	source := 0
+	destination := 5
+	n := 6
+	log.Printf("validPath: %v", leetcode.ValidPath(n, edges, source, destination))
 }
